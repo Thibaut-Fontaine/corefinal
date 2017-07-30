@@ -6,7 +6,7 @@
 /*   By: tfontain <tfontain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/27 20:22:42 by tfontain          #+#    #+#             */
-/*   Updated: 2017/07/30 04:09:46 by tfontain         ###   ########.fr       */
+/*   Updated: 2017/07/30 05:54:51 by tfontain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,5 @@ int			main(int argc, const char *argv[])
 		free_gui(all);
 		endwin();
 	}
-	while (1); //
 	return (0);
 }
