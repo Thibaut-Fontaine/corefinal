@@ -6,7 +6,7 @@
 /*   By: tfontain <tfontain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/09 18:46:49 by tfontain          #+#    #+#             */
-/*   Updated: 2017/07/30 04:09:57 by tfontain         ###   ########.fr       */
+/*   Updated: 2017/07/30 22:31:48 by tfontain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -158,5 +158,6 @@ int				run(t_argv *info)
 		}
 		++info->cycle;
 	}
+	delete_all_process(&head);
 	return (*last_living_player() == 0 ? n_champ(0) : *(last_living_player()));
 }

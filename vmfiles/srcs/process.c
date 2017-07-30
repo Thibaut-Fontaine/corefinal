@@ -6,7 +6,7 @@
 /*   By: tfontain <tfontain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 06:11:08 by tfontain          #+#    #+#             */
-/*   Updated: 2017/07/19 02:37:03 by tfontain         ###   ########.fr       */
+/*   Updated: 2017/07/30 22:32:15 by tfontain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -119,4 +119,19 @@ int						process_live(t_plst **head)
 		cur = tmp;
 	}
 	return (0);
+}
+
+void					delete_all_process(t_plst **head)
+{
+	t_plst				*cur;
+	t_plst				*tmp;
+
+	cur = *head;
+	while (cur)
+	{
+		tmp = cur->nxt;
+		delete_process(cur, head);
+		cur = tmp;
+	}
+	*head = NULL;
 }

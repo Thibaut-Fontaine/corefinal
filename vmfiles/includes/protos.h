@@ -6,7 +6,7 @@
 /*   By: mperronc <mperronc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/22 18:50:43 by mperronc          #+#    #+#             */
-/*   Updated: 2017/07/30 01:33:54 by tfontain         ###   ########.fr       */
+/*   Updated: 2017/07/30 22:31:14 by tfontain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,7 @@ int			**get_ref_tab(void);
 void		fork_process(t_plst **head, t_plst *to_fork, int pc);
 t_plst		*init_process(t_argv info);
 int			process_live(t_plst **head);
+void		delete_all_process(t_plst **head);
 void		free_instruction(t_instruct *instruct);
 void		execute_all_process(t_plst **head, char *arena, char *color,
 		int **ref_tab);
