@@ -6,11 +6,11 @@
 /*   By: tfontain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/23 23:27:02 by tfontain          #+#    #+#             */
-/*   Updated: 2017/01/31 04:31:48 by tfontain         ###   ########.fr       */
+/*   Updated: 2017/07/31 14:34:11 by tfontain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./get_next_line.h"
+#include "./includes/get_next_line.h"
 
 t_list				*ft_generate_list(const int fd)
 {

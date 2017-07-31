@@ -6,7 +6,7 @@
 /*   By: tfontain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 20:35:19 by tfontain          #+#    #+#             */
-/*   Updated: 2017/05/23 15:00:22 by tfontain         ###   ########.fr       */
+/*   Updated: 2017/07/31 14:33:14 by tfontain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <string.h>
+# include "./get_next_line.h"
 
 # define OUTPUT_LEN 4096
 
@@ -60,6 +61,7 @@ int					ft_isalpha(int c);
 int					ft_isdigit(int c);
 int					ft_isascii(int c);
 int					ft_isprint(int c);
+int					ft_iswhitespace(char c);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
 int					ft_isalnum(int c);

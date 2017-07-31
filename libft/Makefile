@@ -6,7 +6,7 @@
 #    By: tfontain <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/05 04:52:55 by tfontain          #+#    #+#              #
-#    Updated: 2017/07/30 04:29:23 by tfontain         ###   ########.fr        #
+#    Updated: 2017/07/31 14:39:45 by tfontain         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,7 +36,7 @@ SRC = ft_memccpy.c ft_putnbr.c ft_strequ.c ft_strnequ.c ft_memchr.c \
 	  ./get_next_line.c ./printf/cast.c ./printf/evaluate2.c \
 	  ./printf/evaluate_len.c ./printf/flags.c ./printf/funcs.c \
 	  ./printf/funcs2.c ./printf/gettype.c ./printf/main_funcs.c \
-	  ./printf/putint.c ./printf/vd_printf.c
+	  ./printf/putint.c ./printf/vd_printf.c ft_iswhitespace.c
 OBJ = $(addsuffix .o,$(basename $(SRC)))
 
 .PHONY : all clean fclean re
