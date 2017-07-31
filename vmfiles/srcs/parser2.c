@@ -6,13 +6,14 @@
 /*   By: tfontain <tfontain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 13:35:35 by tfontain          #+#    #+#             */
-/*   Updated: 2017/07/30 01:34:18 by tfontain         ###   ########.fr       */
+/*   Updated: 2017/07/31 06:35:10 by tfontain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/vm.h"
 
-int						count_champions(int ac, const char *av[], const char **champs)
+int						count_champions(int ac, const char *av[],
+		const char **champs)
 {
 	int					n;
 

@@ -6,7 +6,7 @@
 /*   By: mperronc <mperronc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/20 19:45:05 by mperronc          #+#    #+#             */
-/*   Updated: 2017/07/29 03:28:55 by tfontain         ###   ########.fr       */
+/*   Updated: 2017/07/31 06:31:37 by tfontain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,14 +83,13 @@ int	op_ldi(t_process *proc, t_instruct *instruct, char *arena)
 	{
 		if (!is_valid_reg(instruct->args[1]))
 			return (proc->pc = (proc->pc + instruct->size) % MEM_SIZE);
-		val = proc->reg[instruct->args[1] - 1];
+		val += proc->reg[instruct->args[1] - 1];
 	}
 	else
 		val += instruct->args[1];
-	proc->reg[instruct->args[2] - 1] = extract_at(arena, proc->pc +
-			(val % IDX_MOD));
+	proc->reg[instruct->args[2] - 1] = extract_at(arena, proc->pc + (val % IM));
 	proc->pc = (proc->pc + instruct->size) % MEM_SIZE;
-	return (1);
+	return (proc->carry = (val ? 0 : 1));
 }
 
 int	op_lldi(t_process *proc, t_instruct *instruct, char *arena)
@@ -119,6 +118,5 @@ int	op_lldi(t_process *proc, t_instruct *instruct, char *arena)
 		val += instruct->args[1];
 	proc->reg[instruct->args[2] - 1] = extract_at(arena, proc->pc + val);
 	proc->pc = (proc->pc + instruct->size) % MEM_SIZE;
-	proc->carry = (val ? 0 : 1);
-	return (1);
+	return (proc->carry = (val ? 0 : 1));
 }

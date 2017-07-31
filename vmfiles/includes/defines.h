@@ -6,7 +6,7 @@
 /*   By: mperronc <mperronc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/22 18:47:44 by mperronc          #+#    #+#             */
-/*   Updated: 2017/07/30 04:01:54 by tfontain         ###   ########.fr       */
+/*   Updated: 2017/07/31 06:32:31 by tfontain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 # define _D_ (1 << 0)
 # define _S_ (1 << 1)
 # define _G_ (1 << 2)
-//# define _N_ (1 << 3)
 
 # define MAX_BYTES_PER_PLAYER (MEM_SIZE / MAX_PLAYERS)
 # define U_ sizeof(unsigned int)
@@ -30,5 +29,7 @@
 # define CHMAX CHAMP_MAX_SIZE
 # define COM_L COMMENT_LENGTH
 # define PRGM PROG_NAME_LENGTH
+
+# define IM IDX_MOD
 
 #endif

@@ -6,15 +6,15 @@
 /*   By: mperronc <mperronc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/24 18:45:06 by mperronc          #+#    #+#             */
-/*   Updated: 2017/07/24 18:55:17 by mperronc         ###   ########.fr       */
+/*   Updated: 2017/07/30 23:01:21 by tfontain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/vm.h"
 
-static void free_champs(WINDOW **wins, int n)
+static void		free_champs(WINDOW **wins, int n)
 {
-	int i;
+	int			i;
 
 	i = 0;
 	while (i < n)
@@ -25,10 +25,10 @@ static void free_champs(WINDOW **wins, int n)
 	free(wins);
 }
 
-static void free_wlist(t_wlist *wlist)
+static void		free_wlist(t_wlist *wlist)
 {
-	t_wlist *cur;
-	t_wlist *tmp;
+	t_wlist		*cur;
+	t_wlist		*tmp;
 
 	cur = wlist;
 	while (cur)
@@ -40,9 +40,9 @@ static void free_wlist(t_wlist *wlist)
 	}
 }
 
-void free_gui(t_argv *all)
+void			free_gui(t_argv *all)
 {
-	t_gui *gui;
+	t_gui		*gui;
 
 	gui = all->gui;
 	delwin(gui->win_arena);

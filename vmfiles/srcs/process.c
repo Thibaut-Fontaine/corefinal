@@ -6,7 +6,7 @@
 /*   By: tfontain <tfontain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 06:11:08 by tfontain          #+#    #+#             */
-/*   Updated: 2017/07/30 22:32:15 by tfontain         ###   ########.fr       */
+/*   Updated: 2017/07/31 06:36:54 by tfontain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,28 +57,6 @@ t_plst					*init_process(t_argv info)
 		++i;
 	}
 	return (head);
-}
-
-/*
-** add a forked process to the start of the list by copy (he become the head)
-** because the last process is the first to be executed.
-*/
-
-void					fork_process(t_plst **head, t_plst *to_fork, int pc)
-{
-	t_plst				*new;
-
-	if ((new = malloc(sizeof(t_plst))) == NULL)
-		error(_ERR_STD)(NULL);
-	ft_memcpy(new->proc.reg, to_fork->proc.reg, sizeof(to_fork->proc.reg));
-	new->proc.pc = pc;
-	new->proc.carry = to_fork->proc.carry;
-	new->proc.wait = 0;
-	new->proc.instruct = NULL;
-	new->proc.id = to_fork->proc.id;
-	new->proc.exec_live = to_fork->proc.exec_live;
-	new->nxt = *head;
-	*head = new;
 }
 
 static inline void		delete_process(t_plst *current, t_plst **head)

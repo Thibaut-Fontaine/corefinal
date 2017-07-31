@@ -6,7 +6,7 @@
 /*   By: mperronc <mperronc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/22 18:50:43 by mperronc          #+#    #+#             */
-/*   Updated: 2017/07/30 22:31:14 by tfontain         ###   ########.fr       */
+/*   Updated: 2017/07/31 07:32:01 by tfontain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ void		introducing_contestants(int n_champs, t_header champ[MAX_PLAYERS]);
 void		display_winner(int champ_number, t_header champ[MAX_PLAYERS]);
 void		display_live(int ch_number, t_champion champ[MAX_PLAYERS]);
 void		dump(char *arena);
+void		displaydump(t_argv *info);
 
 t_instruct	*check_operation(char *arena, t_process *proc, int **tab);
 void		get_args(t_process *prc, char *arena, int *tab, t_instruct *ins);
@@ -51,8 +52,7 @@ t_plst		*init_process(t_argv info);
 int			process_live(t_plst **head);
 void		delete_all_process(t_plst **head);
 void		free_instruction(t_instruct *instruct);
-void		execute_all_process(t_plst **head, char *arena, char *color,
-		int **ref_tab);
+void		execute_all_process(t_plst **head, t_argv *info);
 
 /*
 ** op_value is used to get value from direct, indirect or register
@@ -83,7 +83,7 @@ int			run(t_argv *info);
 void		gui(t_argv *all, t_plst *head);
 void		free_gui(t_argv *all);
 char		*init_color_arena(t_argv *all);
-void		handle_wait(void);
+void		handle_wait(t_argv *info, t_plst *head);
 char		*op(int opcode);
 char		*types(int type);
 void		write_color(char *color, int index, char id);
