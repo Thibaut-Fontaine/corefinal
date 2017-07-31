@@ -6,7 +6,7 @@
 /*   By: tfontain <tfontain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/28 20:35:26 by tfontain          #+#    #+#             */
-/*   Updated: 2017/07/31 06:33:26 by tfontain         ###   ########.fr       */
+/*   Updated: 2017/07/31 11:19:26 by tfontain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,46 @@ static inline char		*to_memory(const char *arg,
 	open_file(arg, arena + (MEM_SIZE / n_players) * n, champs + n);
 	return (arena);
 }
+
+/*static inline void		case_flag(int *ac, const char *av[], t_argv *ret,
+		int *n)
+{
+	if ((*av)[1] == 'n' || (*av)[1] == 's' || (*av)[1] == 'd')
+	{
+		if ((*av)[1] == 'n')
+			*n = ft_atoi(av[1]);
+		else
+		{
+			if (ret->f.n != 0)
+				error(_ERR_USAGE)();
+			ret->f.flag |= ((*av)[1] == 'd' ? _D_ : _S_);
+			ret->f.n = ft_atoi(av[1]);
+		}
+		--*ac;
+		++av;
+	}
+	else if ((*av)[1] == 'g')
+		ret->f.flag |= _G_;
+}*/
+
+/*static inline void			case_player(int *n, t_argv ret, const char *av[],
+		const char *champs[])
+{
+	if (*n != -1)
+	{
+		if (*n > ret.n_champs || champs[*n - 1] != *av)
+			error(_ERR_BAD_NFLAG)();
+		*n = -1;
+	}
+	else
+	{
+		*n = 0;
+		while (champs[*n] != NULL)
+			++*n;
+		champs[*n] = *av;
+		*n = -1;
+	}
+}*/
 
 t_argv					*parse(int ac, const char *av[])
 {
@@ -38,6 +78,7 @@ t_argv					*parse(int ac, const char *av[])
 	{
 		if ((*av)[0] == '-' && (*av)[2] == 0)
 		{
+			//case_flag(&ac, av, &ret, &n);
 			if ((*av)[1] == 'n' || (*av)[1] == 's' || (*av)[1] == 'd')
 			{
 				if ((*av)[1] == 'n')
@@ -57,6 +98,7 @@ t_argv					*parse(int ac, const char *av[])
 		}
 		else
 		{
+			//case_player(&n, ret, av, champs);
 			if (n != -1)
 			{
 				if (n > ret.n_champs || champs[n - 1] != *av)
