@@ -36,8 +36,6 @@
 *.su
 
 # resources folder and corewar files
-*.s
 *.cor
-./ressources/*
 corewar
-asm/asm
+asm

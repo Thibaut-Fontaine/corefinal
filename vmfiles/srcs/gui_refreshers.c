@@ -6,7 +6,7 @@
 /*   By: mperronc <mperronc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/18 19:58:50 by mperronc          #+#    #+#             */
-/*   Updated: 2017/07/19 02:32:23 by tfontain         ###   ########.fr       */
+/*   Updated: 2017/07/31 15:26:15 by tfontain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,10 +67,10 @@ void		refresh_info(t_argv *all, WINDOW *win)
 {
 	box(win, 0, 0);
 	mvwprintw(win, 0, 2, "VM STATUS");
-	mvwprintw(win, 1, 1, "CYCLE : %d", all->cycle);
-	mvwprintw(win, 2, 1, "CYCLE TO DIE : %d", all->cycle_to_die);
-	mvwprintw(win, 3, 1, "CHECKS : %d", all->checks);
-	mvwprintw(win, 4, 1, "LAST LIVING PLAYER : %d", *last_living_player());
+	mvwprintw(win, 1, 1, "CYCLE : %.6ju", all->cycle);
+	mvwprintw(win, 2, 1, "CYCLE TO DIE : %.6jd", all->cycle_to_die);
+	mvwprintw(win, 3, 1, "CHECKS : %.6ju", all->checks);
+	mvwprintw(win, 4, 1, "LAST LIVING PLAYER : %.6d", *last_living_player());
 	wrefresh(win);
 }
 

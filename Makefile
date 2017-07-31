@@ -6,7 +6,7 @@
 #    By: jgagnot <jgagnot@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/03/13 09:59:01 by jgagnot           #+#    #+#              #
-#    Updated: 2017/07/31 14:53:04 by tfontain         ###   ########.fr        #
+#    Updated: 2017/07/31 14:56:38 by tfontain         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,4 +29,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: clean fclean re odir
+.PHONY: clean fclean re
